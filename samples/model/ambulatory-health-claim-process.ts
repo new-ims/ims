@@ -1,0 +1,61 @@
+// Auto-generated from samples/model.json
+
+import type { ISODateTimeString } from './atoms';
+import type { AmbulatorySuperClaim } from './ambulatory-super-claim';
+import type { DocumentPackageExtension } from './document-package-extension';
+import type { DocumentsPackage } from './documents-package';
+import type { HealthClaimBeneficiary } from './health-claim-beneficiary';
+import type { HealthClaimPolicy } from './health-claim-policy';
+import type { Insured } from './insured';
+import type { Modify } from './modify';
+import type { ScaledNumber } from './scaled-number';
+import type { Transmission } from './transmission';
+
+export interface AmbulatoryHealthClaimProcess {
+  readonly _id: string;
+  readonly beneficiary: HealthClaimBeneficiary;
+  readonly calculatedDateOverided: boolean;
+  readonly claimDetailsUpdated: boolean;
+  readonly className: 'il.co.migdal.ins.ambulatory.model.AmbulatoryHealthClaimProcess';
+  readonly clerkId: ScaledNumber;
+  readonly clerkSerialNum: ScaledNumber;
+  readonly company: string;
+  readonly creationDate: ISODateTimeString;
+  readonly creatorId: ScaledNumber;
+  readonly deleteOperativeClaims: boolean;
+  readonly documentPackageExtension: DocumentPackageExtension;
+  readonly documentsPackage: DocumentsPackage;
+  readonly getPoliciesDataFlag: boolean;
+  readonly illnessStartDateChangedFlag: boolean;
+  readonly insured: Insured;
+  readonly isDocoumentArrived: boolean;
+  readonly isDummyProcess: boolean;
+  readonly isInsuredVerified: boolean;
+  readonly kycIncomeSourceRequired: boolean;
+  readonly kycIndirect: boolean;
+  readonly kycRequired: boolean;
+  readonly lastModify: Modify;
+  readonly module: string;
+  readonly openingSource: string;
+  readonly policies: readonly (HealthClaimPolicy)[];
+  readonly processKey: string;
+  readonly processType: string;
+  readonly referantSerialNum: ScaledNumber;
+  readonly referantUserId: number;
+  readonly referantUserName: string;
+  readonly refreshDataAfterSuspend: boolean;
+  readonly selectedTab: string;
+  readonly skipLetterValidation3: boolean;
+  readonly status: number;
+  readonly step: number;
+  readonly stepName: string;
+  readonly superClaim: AmbulatorySuperClaim;
+  readonly taskCreationDate: ISODateTimeString;
+  readonly taskId: string;
+  readonly taskIdPrevious: string;
+  readonly taskName: string;
+  readonly taskNamePrevious: string;
+  readonly transmission: Transmission;
+  readonly updateClaimsFlag: boolean;
+  readonly version: number;
+}

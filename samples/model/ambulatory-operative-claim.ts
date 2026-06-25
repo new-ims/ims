@@ -1,0 +1,68 @@
+// Auto-generated from samples/model.json
+
+import type { ISODateTimeString } from './atoms';
+import type { CodeValue } from './code-value';
+import type { HealthClaimBankAccount } from './health-claim-bank-account';
+import type { HealthClaimLine } from './health-claim-line';
+import type { ScaledNumber } from './scaled-number';
+
+export interface AmbulatoryOperativeClaim {
+  readonly applicationOpenYear: number;
+  readonly applicationTypeId: string;
+  readonly approvalForForeclosure: number;
+  readonly approvalforFunctionary: number;
+  readonly approvalforLMH: number;
+  readonly approvalforParty: number;
+  readonly as400CreateUserId: ScaledNumber;
+  readonly bankAccounts: readonly (HealthClaimBankAccount)[];
+  readonly bankDetailsUpdated: boolean;
+  readonly bankTransfer: number;
+  readonly check: number;
+  readonly claimApprovalStatusId: number;
+  readonly claimLines: readonly (HealthClaimLine)[];
+  readonly claimManagementSystem: number;
+  readonly claimNum: number;
+  readonly claimPremiaAccount: boolean;
+  readonly claimSettlmentDate: ISODateTimeString;
+  readonly claimStatus: CodeValue;
+  readonly claimType: CodeValue;
+  readonly className: 'il.co.migdal.ins.ambulatory.model.AmbulatoryOperativeClaim';
+  readonly collectiveId: number;
+  readonly company: string;
+  readonly continuity: boolean;
+  readonly createUserId: string;
+  readonly currencyId: number;
+  readonly displayExplainability: boolean;
+  readonly doctorSettlement: boolean;
+  readonly documentForService: boolean;
+  readonly doubleClaim: boolean;
+  readonly doubleCover: boolean;
+  readonly dubleReceiptNumber: boolean;
+  readonly eventDesciption: string;
+  readonly eventId: string;
+  readonly eventNotInPolicy: boolean;
+  readonly externalDoubleCover: boolean;
+  readonly externalInsurer: boolean;
+  readonly familyDuplicateReference: boolean;
+  readonly familyHeadConfiscationFlag: boolean;
+  readonly familyHeadFunctionaryId: number;
+  readonly familyHeadIdentityCard: number;
+  readonly familyHeadPartyId: number;
+  readonly functionaryId: number;
+  readonly historicalFlag: boolean;
+  readonly inAgingPeriod: boolean;
+  readonly inQualificationPeriod: boolean;
+  readonly insuredConfiscationFlag: boolean;
+  readonly interestedPartyId: number;
+  readonly inWaitingPeriod: boolean;
+  readonly lastClaimLineIdentification: number;
+  readonly maxSumForApproval: number;
+  readonly openDate: ISODateTimeString;
+  readonly payInConfiscation: boolean;
+  readonly payInPolicyDebt: boolean;
+  readonly policyDebt: boolean;
+  readonly recommendationUpdated: boolean;
+  readonly ruleEngineFlag: boolean;
+  readonly showCancelFlag: boolean;
+  readonly twoCoverage: boolean;
+}
