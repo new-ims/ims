@@ -1,0 +1,20 @@
+[
+  {
+    "processKey": 47603109,
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "readonlyLevel": "NONE",
+    "type": "AMBULATORY_HEALTH_CLAIM"
+  },
+  {
+    "processKey": 47603110,
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "readonlyLevel": "NONE",
+    "type": "AMBULATORY_HEALTH_CLAIM"
+  },
+  {
+    "processKey": 47603111,
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "readonlyLevel": "NONE",
+    "type": "AMBULATORY_HEALTH_CLAIM"
+  }
+]
