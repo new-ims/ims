@@ -1,0 +1,200 @@
+[
+  {
+    "className": "il.co.migdal.ins.ambulatory.model.AmbulatoryHealthClaimProcess",
+    "processKey": "47603109",
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "status": 0,
+    "step": 3,
+    "stepName": "INSURED_REQUESTS",
+    "module": "HEALTH_CLAIMS",
+    "company": "MIGDAL",
+    "taskName": "REFERANT",
+    "taskId": "47772882",
+    "creationDate": "2026-01-07T11:30:57.559+0000",
+    "insured": {
+      "className": "il.co.migdal.ins.entities.person.insured.Insured",
+      "identity": 999999999,
+      "identityType": "IDENTITY_NUMBER",
+      "firstName": "Momi",
+      "lastName": "Cohen",
+      "birthDate": "1955-07-31T21:00:00.000+0000",
+      "gender": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1,
+        "value": "Male"
+      }
+    },
+    "policies": [
+      {
+        "className": "il.co.migdal.ins.shared.model.HealthClaimPolicy",
+        "policyID": 1111111,
+        "coverages": [
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 1111111,
+            "coverID": 111,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 11,
+              "value": "Global Surgery"
+            },
+            "statusDesciption": "Active",
+            "selected": false
+          },
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 1111111,
+            "coverID": 222,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 1594,
+              "value": "Surgeries Abroad"
+            },
+            "statusDesciption": "Active",
+            "selected": false
+          }
+        ]
+      }
+    ],
+    "claimAdditionalData": {
+      "className": "il.co.migdal.ins.shared.model.ClaimAdditionalData",
+      "claimType": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1,
+        "value": "Ambulatory"
+      }
+    }
+  },
+  {
+    "className": "il.co.migdal.ins.ambulatory.model.AmbulatoryHealthClaimProcess",
+    "processKey": "47603110",
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "status": 0,
+    "step": 2,
+    "stepName": "CLAIM_DETAILS",
+    "module": "HEALTH_CLAIMS",
+    "company": "MIGDAL",
+    "taskName": "CLAIM_HANDLER",
+    "taskId": "47772883",
+    "creationDate": "2026-02-10T08:22:11.100+0000",
+    "insured": {
+      "className": "il.co.migdal.ins.entities.person.insured.Insured",
+      "identity": 123456789,
+      "identityType": "IDENTITY_NUMBER",
+      "firstName": "Dana",
+      "lastName": "Levi",
+      "birthDate": "1988-04-12T21:00:00.000+0000",
+      "gender": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 2,
+        "value": "Female"
+      }
+    },
+    "policies": [
+      {
+        "className": "il.co.migdal.ins.shared.model.HealthClaimPolicy",
+        "policyID": 2222222,
+        "coverages": [
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 2222222,
+            "coverID": 333,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 1599,
+              "value": "Extended Surgeries in Israel"
+            },
+            "statusDesciption": "Active",
+            "selected": true
+          },
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 2222222,
+            "coverID": 444,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 22,
+              "value": "General Health Terms"
+            },
+            "statusDesciption": "Active",
+            "selected": false
+          }
+        ]
+      }
+    ],
+    "claimAdditionalData": {
+      "className": "il.co.migdal.ins.shared.model.ClaimAdditionalData",
+      "claimType": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 2,
+        "value": "Medical Consultation"
+      }
+    }
+  },
+  {
+    "className": "il.co.migdal.ins.ambulatory.model.AmbulatoryHealthClaimProcess",
+    "processKey": "47603111",
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "status": 0,
+    "step": 4,
+    "stepName": "DOCUMENTS_INTEGRITY",
+    "module": "HEALTH_CLAIMS",
+    "company": "MIGDAL",
+    "taskName": "APPROVAL_AUTHORITY",
+    "taskId": "47772884",
+    "creationDate": "2026-03-18T13:05:29.775+0000",
+    "insured": {
+      "className": "il.co.migdal.ins.entities.person.insured.Insured",
+      "identity": 234567890,
+      "identityType": "IDENTITY_NUMBER",
+      "firstName": "Yossi",
+      "lastName": "Bar",
+      "birthDate": "1979-11-22T22:00:00.000+0000",
+      "gender": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1,
+        "value": "Male"
+      }
+    },
+    "policies": [
+      {
+        "className": "il.co.migdal.ins.shared.model.HealthClaimPolicy",
+        "policyID": 3333333,
+        "coverages": [
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 3333333,
+            "coverID": 555,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 33,
+              "value": "Medication"
+            },
+            "statusDesciption": "Active",
+            "selected": true
+          },
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 3333333,
+            "coverID": 777,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 44,
+              "value": "Complementary Medicine"
+            },
+            "statusDesciption": "Active",
+            "selected": false
+          }
+        ]
+      }
+    ],
+    "claimAdditionalData": {
+      "className": "il.co.migdal.ins.shared.model.ClaimAdditionalData",
+      "claimType": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 3,
+        "value": "Rehabilitation"
+      }
+    }
+  }
+]

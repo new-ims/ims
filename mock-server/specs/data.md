@@ -1,0 +1,1 @@
+We need you to create data file - data.json - that contains three objects of a type AmbulatoryHealthClaimProcess. use a variaty of random values but try to stick to the general idea of the sample provided in the sample-model.json file
