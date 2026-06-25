@@ -1,0 +1,1 @@
+We need you to create data file - data.json - that contains three objects of a type AmbulatoryHealthClaimProcess and with the get function you need to get us the one with the same ProcessKey
