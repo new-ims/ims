@@ -4,9 +4,16 @@ const path = require('path');
 
 const PORT = Number(process.env.MOCK_SERVER_PORT || 3001);
 const DATA_PATH = path.join(__dirname, 'data.json');
+const EXTERNAL_LOGIN_DATA_PATH = path.join(__dirname, 'external-login-data.json');
 
 function readData() {
   const file = fs.readFileSync(DATA_PATH, 'utf8');
+  const parsed = JSON.parse(file);
+  return Array.isArray(parsed) ? parsed : [];
+}
+
+function readExternalLoginData() {
+  const file = fs.readFileSync(EXTERNAL_LOGIN_DATA_PATH, 'utf8');
   const parsed = JSON.parse(file);
   return Array.isArray(parsed) ? parsed : [];
 }
@@ -100,6 +107,76 @@ const server = http.createServer(async (req, res) => {
         baseProcess: null,
         processMessage: [],
         invalidTabString: []
+      });
+      return;
+    }
+  }
+
+  if (req.method === 'POST' && req.url === '/externalLoginController/externalLogin') {
+    try {
+      const body = await parseRequestBody(req);
+      const sessionManagerId = body?.sessionManagerId;
+      const users = readExternalLoginData();
+      const matchedUser = users.find(item => String(item?.sessionManagerData?.sessionId) === String(sessionManagerId)) || null;
+
+      const responseBody = matchedUser || {
+        resultCode: 1,
+        resultDesc: 'User not found',
+        messages: [],
+        failed: true,
+        userId: '',
+        userDisplayName: '',
+        userRoleTitle: '',
+        authToken: '',
+        userRoles: {},
+        userProfile: null,
+        processKey: '',
+        processType: '',
+        processTypeCode: 0,
+        loanType: '',
+        insuredId: 0,
+        companyCode: 0,
+        userSerialNumber: 0,
+        sessionManagerData: {},
+        userAttributes: [],
+        wasUserSessionDeleted: false,
+        wasActivatePerfomed: false
+      };
+
+      setTimeout(() => {
+        sendJson(res, matchedUser ? 200 : 404, responseBody);
+      }, getRandomDelayMs());
+      return;
+    } catch (error) {
+      sendJson(res, 400, {
+        resultCode: 1,
+        resultDesc: 'Invalid request payload',
+        messages: [
+          {
+            level: 2,
+            message: 'Request body is not valid JSON',
+            refId: null,
+            messageId: null
+          }
+        ],
+        failed: true,
+        userId: '',
+        userDisplayName: '',
+        userRoleTitle: '',
+        authToken: '',
+        userRoles: {},
+        userProfile: null,
+        processKey: '',
+        processType: '',
+        processTypeCode: 0,
+        loanType: '',
+        insuredId: 0,
+        companyCode: 0,
+        userSerialNumber: 0,
+        sessionManagerData: {},
+        userAttributes: [],
+        wasUserSessionDeleted: false,
+        wasActivatePerfomed: false
       });
       return;
     }
