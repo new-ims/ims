@@ -6,7 +6,9 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "ims-infra": ["./dist/ims-infra"]
+      "@ims": [
+        "./projects/ims-infra/src/public-api.ts"
+      ]
     },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,

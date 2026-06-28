@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { ImsInfra } from '@ims';
+
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [ImsInfra],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
