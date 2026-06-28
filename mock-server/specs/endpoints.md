@@ -30,3 +30,11 @@ responseBody: ProcessServiceOutput
 ---
 validates the document integrity step entry conditions and returns an updated process with refreshed document package state, process messages, and invalid tabs list.
 
+#documentsStep complete step
+
+method: POST
+url: claimsFacade/endDocumentIntegrityStep
+body: { process: IClaimProcess }
+responseBody: ProcessServiceOutput
+---
+validates and completes the document integrity step, returns the updated process with any validation messages, and determines if the process should proceed to the next step or wait for documents.
