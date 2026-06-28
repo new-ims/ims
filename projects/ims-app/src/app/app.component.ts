@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ImsInfra } from '@ims';
+import { ImsShared } from '@ims';
 
 
 @Component({
   selector: 'app-root',
-  imports: [ImsInfra],
+  imports: [ImsShared],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
