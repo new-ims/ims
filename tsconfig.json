@@ -5,6 +5,9 @@
   "compilerOptions": {
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "ims-infra": ["./dist/ims-infra"]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
@@ -23,6 +26,12 @@
   "references": [
     {
       "path": "./projects/ims-app/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ims-infra/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ims-infra/tsconfig.spec.json"
     }
   ]
 }
