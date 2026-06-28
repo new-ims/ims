@@ -8,6 +8,9 @@
     "paths": {
       "@ims": [
         "./projects/ims-infra/src/public-api.ts"
+      ], 
+      "@common": [
+        "./common"
       ]
     },
     "noImplicitReturns": true,

@@ -1,9 +1,12 @@
-import { provideHttpClient } from "@angular/common/http";
-import { EnvironmentProviders, makeEnvironmentProviders } from "@angular/core";
+import { EnvironmentProviders, inject, makeEnvironmentProviders, provideAppInitializer } from "@angular/core";
+import { BootstrapService } from "../shared/services/bootstrap.service";
 
 export function provideInfra(): EnvironmentProviders {
     return makeEnvironmentProviders([
-        provideHttpClient()
+        provideAppInitializer(async () => {
+            const bootstrapper = inject(BootstrapService);
+            await bootstrapper.start();
+        })
     ]);
 
 }

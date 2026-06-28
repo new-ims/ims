@@ -3,11 +3,7 @@ import { OutputBase } from "./bases";
 import { UserProfile } from "./user-profile";
 
 export interface ExternalLoginInput {
-    userName: string,
-    password: string,
-    companyCode: number,
     sessionManagerId: string,
-    roleCode: number
 }
 
 export interface ExternalLoginOutput extends OutputBase {
