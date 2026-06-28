@@ -1,0 +1,170 @@
+[
+  {
+    "resultCode": 0,
+    "resultDesc": "Success",
+    "messages": [],
+    "failed": false,
+    "userId": "ext-user-47603109",
+    "userDisplayName": "Momi Cohen",
+    "userRoleTitle": "CLAIM_HANDLER",
+    "authToken": "token-47603109-abc123",
+    "userRoles": {
+      "ROLE_CLAIM_HANDLER": true,
+      "ROLE_INSURED": false
+    },
+    "userProfile": {
+      "operatorCode": 1001,
+      "roleSerialNum": 2001,
+      "roleCode": 9001,
+      "companyCode": 10,
+      "districtNum": 3,
+      "teamNum": 7,
+      "agentType": 2,
+      "agentNum": 55,
+      "insuredFactoryNum": 77,
+      "operatorRoleTitle": "CLAIM_HANDLER",
+      "swSync": "SYNCED",
+      "requestId": 47603109,
+      "companyLevel": 1,
+      "operatorName": "Momi Cohen",
+      "operatorUserName": "momi.cohen"
+    },
+    "processKey": "47603109",
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "processTypeCode": 100,
+    "loanType": "HEALTH",
+    "insuredId": 999999999,
+    "companyCode": 10,
+    "userSerialNumber": 1000001,
+    "sessionManagerData": {
+      "sessionId": "sess-47603109",
+      "source": "external-login"
+    },
+    "userAttributes": [
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1,
+        "value": "Male"
+      },
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 11,
+        "value": "Global Surgery"
+      }
+    ],
+    "wasUserSessionDeleted": false,
+    "wasActivatePerfomed": true
+  },
+  {
+    "resultCode": 0,
+    "resultDesc": "Success",
+    "messages": [],
+    "failed": false,
+    "userId": "ext-user-47603110",
+    "userDisplayName": "Dana Levi",
+    "userRoleTitle": "APPROVER",
+    "authToken": "token-47603110-def456",
+    "userRoles": {
+      "ROLE_APPROVER": true,
+      "ROLE_CLAIM_HANDLER": false
+    },
+    "userProfile": {
+      "operatorCode": 1002,
+      "roleSerialNum": 2002,
+      "roleCode": 9002,
+      "companyCode": 10,
+      "districtNum": 4,
+      "teamNum": 8,
+      "agentType": 3,
+      "agentNum": 66,
+      "insuredFactoryNum": 88,
+      "operatorRoleTitle": "APPROVER",
+      "swSync": "SYNCED",
+      "requestId": 47603110,
+      "companyLevel": 2,
+      "operatorName": "Dana Levi",
+      "operatorUserName": "dana.levi"
+    },
+    "processKey": "47603110",
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "processTypeCode": 101,
+    "loanType": "HEALTH",
+    "insuredId": 123456789,
+    "companyCode": 10,
+    "userSerialNumber": 1000002,
+    "sessionManagerData": {
+      "sessionId": "sess-47603110",
+      "source": "external-login"
+    },
+    "userAttributes": [
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 2,
+        "value": "Female"
+      },
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1599,
+        "value": "Extended Surgeries in Israel"
+      }
+    ],
+    "wasUserSessionDeleted": false,
+    "wasActivatePerfomed": false
+  },
+  {
+    "resultCode": 0,
+    "resultDesc": "Success",
+    "messages": [],
+    "failed": false,
+    "userId": "ext-user-47603111",
+    "userDisplayName": "Yossi Bar",
+    "userRoleTitle": "DOCUMENTS_MANAGER",
+    "authToken": "token-47603111-ghi789",
+    "userRoles": {
+      "ROLE_DOCUMENTS_MANAGER": true,
+      "ROLE_APPROVER": false
+    },
+    "userProfile": {
+      "operatorCode": 1003,
+      "roleSerialNum": 2003,
+      "roleCode": 9003,
+      "companyCode": 10,
+      "districtNum": 5,
+      "teamNum": 9,
+      "agentType": 4,
+      "agentNum": 77,
+      "insuredFactoryNum": 99,
+      "operatorRoleTitle": "DOCUMENTS_MANAGER",
+      "swSync": "SYNCED",
+      "requestId": 47603111,
+      "companyLevel": 3,
+      "operatorName": "Yossi Bar",
+      "operatorUserName": "yossi.bar"
+    },
+    "processKey": "47603111",
+    "processType": "AMBULATORY_HEALTH_CLAIM",
+    "processTypeCode": 102,
+    "loanType": "HEALTH",
+    "insuredId": 234567890,
+    "companyCode": 10,
+    "userSerialNumber": 1000003,
+    "sessionManagerData": {
+      "sessionId": "sess-47603111",
+      "source": "external-login"
+    },
+    "userAttributes": [
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1,
+        "value": "Male"
+      },
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 33,
+        "value": "Medication"
+      }
+    ],
+    "wasUserSessionDeleted": false,
+    "wasActivatePerfomed": true
+  }
+]
