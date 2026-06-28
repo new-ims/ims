@@ -28,7 +28,7 @@ baseProcess: Go to data.json and get the object that it's processKey is the same
 method: POST
 url: /claimsFacade/enterClaimDocumentIntegrityStep
 body: { process: AmbulatoryHealthClaimProcess }
-responseBody: ProcessServiceOutput
+responseBody: GetProcessOutput
 ---
 validates the document integrity step entry conditions and returns an updated process with refreshed document package state, process messages, and invalid tabs list.
 
@@ -37,6 +37,6 @@ validates the document integrity step entry conditions and returns an updated pr
 method: POST
 url: /claimsFacade/endDocumentIntegrityStep
 body: { process: AmbulatoryHealthClaimProcess }
-responseBody: ProcessServiceOutput
+responseBody: GetProcessOutput
 ---
 validates and completes the document integrity step, returns the updated process with any validation messages, and determines if the process should proceed to the next step or wait for documents.

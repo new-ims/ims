@@ -1,4 +1,5 @@
 import { Model } from "../model";
+import { OutputBase } from "./bases";
 import { UserProfile } from "./user-profile";
 
 export interface ExternalLoginInput {
@@ -9,11 +10,7 @@ export interface ExternalLoginInput {
     roleCode: number
 }
 
-export interface ExternalLoginOutput {
-   resultCode: number;
-    resultDesc: string;
-    messages: Model.Message[];
-    failed: boolean; 
+export interface ExternalLoginOutput extends OutputBase {
   userId: string;
     userDisplayName: string;
     userRoleTitle: string;

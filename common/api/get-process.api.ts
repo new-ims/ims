@@ -1,4 +1,4 @@
-import { Model } from '../model';
+import { ProcessServiceOutputBase } from './bases';
 
 export interface GetProcessInput {
     readonly processKey: number;
@@ -7,12 +7,5 @@ export interface GetProcessInput {
     readonly type: "AMBULATORY_HEALTH_CLAIM";
 }
 
-export interface GetProcessOutput {
-    readonly resultCode: number;
-    readonly resultDesc: string;
-    readonly messages: Model.Message[];
-    readonly failed: boolean;
-    readonly baseProcess: Model.Root;
-    readonly processMessage: Model.ProcessMessage[];
-    readonly invalidTabString: string[];
+export interface GetProcessOutput extends ProcessServiceOutputBase {
 }
