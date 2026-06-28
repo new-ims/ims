@@ -3,3 +3,4 @@
  */
 
 export * from './lib/shared/shared';
+export * from './lib/provider/provide-infra';
