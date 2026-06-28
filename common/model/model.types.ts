@@ -26,8 +26,11 @@ export type { HealthClaimParagraph } from './health-claim-paragraph';
 export type { HealthClaimPolicy } from './health-claim-policy';
 export type { ImageMasavData } from './image-masav-data';
 export type { Insured } from './insured';
+export type { Message } from './message.model';
 export type { Modify } from './modify';
 export type { ProcessLetterData } from './process-letter-data';
+export { PROCESS_MESSAGE_TYPES } from './process-message.model';
+export type { ProcessMessage, ProcessMessageType } from './process-message.model';
 export type { ReferantDecision } from './referant-decision';
 export type { RequestedDocument } from './requested-document';
 export type { ScaledNumber } from './scaled-number';
@@ -35,5 +38,6 @@ export type { ScannedDocument } from './scanned-document';
 export type { Shape1 } from './shape-1';
 export type { Transmission } from './transmission';
 export type { ISODateTimeString } from './atoms';
+
 
 export type Root = AmbulatoryHealthClaimProcess;

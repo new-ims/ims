@@ -1,7 +1,18 @@
-export interface LoginOutput {
+import { Model } from "../model";
+import { UserProfile } from "./user-profile";
+
+export interface ExternalLoginInput {
+    userName: string,
+    password: string,
+    companyCode: number,
+    sessionManagerId: string,
+    roleCode: number
+}
+
+export interface ExternalLoginOutput {
    resultCode: number;
     resultDesc: string;
-    messages: model.Message[];
+    messages: Model.Message[];
     failed: boolean; 
   userId: string;
     userDisplayName: string;
@@ -17,7 +28,8 @@ export interface LoginOutput {
     companyCode: number;
     userSerialNumber: number;
     sessionManagerData: { [key: string]: string };
-    userAttributes: model.CodeValue[];
+    userAttributes: Model.CodeValue[];
     wasUserSessionDeleted: boolean;
     wasActivatePerfomed: boolean;
 }
+
