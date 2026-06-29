@@ -22,10 +22,10 @@ export class BootstrapService {
         }
 
         const input = { sessionManagerId };
-        await this.#delay(5000); // wait for 1 second to simulate some delay
+        await this.#delay(2000); // wait for 1 second to simulate some delay
         const output = await this.#api.externalLogin(input);
         console.log('External login output:', output);
-        await this.#delay(10000); // wait for 1 second to simulate some delay
+        await this.#delay(2000); // wait for 1 second to simulate some delay
 
         const processType = output.processType;
         const configurer = await this.#registry(processType);

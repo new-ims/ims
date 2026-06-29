@@ -1,9 +1,16 @@
-import { InjectionToken } from "@angular/core";
+import { InjectionToken, Type } from "@angular/core";
 import { Model } from "@common";
+
+export interface ProcessStep {
+    readonly id: string;
+    readonly label: string;
+    readonly component: Type<any>;
+
+}
 
 export interface ProcessConfig {
     readonly processType: Model.ProcessType;
-    readonly steps: string[];
+    readonly steps: ProcessStep[];
 }
 
 export type ProcessConfiger = () => ProcessConfig;
