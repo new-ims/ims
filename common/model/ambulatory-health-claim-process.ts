@@ -39,7 +39,7 @@ export interface AmbulatoryHealthClaimProcess {
   readonly openingSource: string;
   readonly policies: readonly (HealthClaimPolicy)[];
   readonly processKey: string;
-  readonly processType: string;
+  readonly processType: 'AMBULATORY_HEALTH_CLAIM';
   readonly referantSerialNum: ScaledNumber;
   readonly referantUserId: number;
   readonly referantUserName: string;

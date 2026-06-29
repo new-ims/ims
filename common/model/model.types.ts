@@ -41,3 +41,5 @@ export type { ISODateTimeString } from './atoms';
 
 
 export type Root = AmbulatoryHealthClaimProcess;
+export type Process = AmbulatoryHealthClaimProcess;
+export type ProcessType = Process['processType'];

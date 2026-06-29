@@ -20,6 +20,7 @@ export class BootstrapService {
 
         const input = { sessionManagerId };
         const output = await this.#api.externalLogin(input);
+        const processType = output.processType;
 
         console.log('External login output:', output);
         console.log('BootstrapService finished');

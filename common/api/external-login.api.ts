@@ -14,7 +14,7 @@ export interface ExternalLoginOutput extends OutputBase {
     userRoles: { [key: string]: any };
     userProfile: UserProfile;
     processKey: string;
-    processType: string;
+    processType: Model.ProcessType;
     processTypeCode: number;
     loanType: string;
     insuredId: number;
