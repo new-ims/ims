@@ -34,6 +34,7 @@
     "processTypeCode": 100,
     "loanType": "HEALTH",
     "insuredId": 999999999,
+    "isHistorical": false,
     "companyCode": 10,
     "userSerialNumber": 1000001,
     "sessionManagerData": {
@@ -90,6 +91,7 @@
     "processTypeCode": 101,
     "loanType": "HEALTH",
     "insuredId": 123456789,
+    "isHistorical": false,
     "companyCode": 10,
     "userSerialNumber": 1000002,
     "sessionManagerData": {
@@ -146,6 +148,7 @@
     "processTypeCode": 102,
     "loanType": "HEALTH",
     "insuredId": 234567890,
+    "isHistorical": true,
     "companyCode": 10,
     "userSerialNumber": 1000003,
     "sessionManagerData": {

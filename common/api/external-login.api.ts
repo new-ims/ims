@@ -17,7 +17,8 @@ export interface ExternalLoginOutput extends OutputBase {
     processType: Model.ProcessType;
     processTypeCode: number;
     loanType: string;
-    insuredId: number;
+    insuredId: number
+    isHistorical: boolean;
     companyCode: number;
     userSerialNumber: number;
     sessionManagerData: { [key: string]: string };
