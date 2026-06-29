@@ -1,9 +1,12 @@
 import { inject, Service } from "@angular/core";
 import { ApiService } from "./api.service";
+import { REGISTRY_TOKEN } from "./process-config";
 
 @Service()
 export class BootstrapService {
     readonly #api = inject(ApiService);
+    readonly #registry = inject(REGISTRY_TOKEN);
+    
     #delay(millis: number) {
         return new Promise(resolve => setTimeout(resolve, millis));
     }
@@ -19,10 +22,16 @@ export class BootstrapService {
         }
 
         const input = { sessionManagerId };
+        await this.#delay(5000); // wait for 1 second to simulate some delay
         const output = await this.#api.externalLogin(input);
-        const processType = output.processType;
-
         console.log('External login output:', output);
+        await this.#delay(10000); // wait for 1 second to simulate some delay
+
+        const processType = output.processType;
+        const configurer = await this.#registry(processType);
+        const config = configurer();
+        console.log('config: ', config);
+
         console.log('BootstrapService finished');
     }
 }
