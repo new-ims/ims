@@ -9,7 +9,13 @@ export function getAmbulatoryConfig(): ProcessConfig {
             {
                 id: 'document', 
                 label: 'מסמכים',
-                component: DocumentStepComponent
+                component: DocumentStepComponent, 
+                onEnter: () => {
+                    console.log('Entering document step');
+                }, 
+                onComplete: () => {
+                    console.log('Completing document step');
+                }
             }, 
             {
                 id: 'insured-request', 
