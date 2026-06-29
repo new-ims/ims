@@ -36,6 +36,10 @@ export function getAmbulatoryConfig(): ProcessConfig {
                 label: 'שאילתות',
                 component: EnquiriesInfoComponent
             }
-        ]
+        ], 
+        regularToolbar: (defaults) => ({
+            ...defaults,
+            splitProcess: undefined,
+        })
     };
 }
