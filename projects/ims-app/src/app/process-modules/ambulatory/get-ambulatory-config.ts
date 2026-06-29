@@ -39,7 +39,8 @@ export function getAmbulatoryConfig(): ProcessConfig {
         ], 
         regularToolbar: (defaults) => ({
             ...defaults,
-            splitProcess: undefined,
+            processConsultation: undefined,
+            splitProcess: async () => console.log('Split process action triggered'),
         })
     };
 }
