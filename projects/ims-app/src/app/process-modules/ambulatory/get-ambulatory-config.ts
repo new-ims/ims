@@ -37,6 +37,7 @@ export function getAmbulatoryConfig(): ProcessConfig {
                 component: EnquiriesInfoComponent
             }
         ], 
+        verifyInsured: false,
         regularToolbar: (defaults) => ({
             ...defaults,
             processConsultation: undefined,
