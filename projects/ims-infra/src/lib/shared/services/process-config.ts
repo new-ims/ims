@@ -3,6 +3,8 @@ import { Model } from "@common";
 import { MaybeAsyncVoid } from "../../../tools";
 
 
+
+
 export type OnEnterHook = () => MaybeAsyncVoid;
 export type OnCompleteHook = () => MaybeAsyncVoid;
 
@@ -15,9 +17,45 @@ export interface ProcessStep {
 
 }
 
+export interface ProcessInfo {
+    readonly id: string;
+    readonly label: string;
+    readonly component: Type<any>;
+}
+
+export type ToolbarAction = (() => MaybeAsyncVoid) | null;
+
+export interface ProcessToolbarBase {
+    readonly processConsultation?: ToolbarAction;
+    readonly comments?: ToolbarAction;
+    readonly contactCustomerService?: ToolbarAction;
+    readonly cancelProcess?: ToolbarAction;
+}
+
+export interface ProcessRegularToolbar extends ProcessToolbarBase {
+    readonly irregualMark?: ToolbarAction;
+    readonly redIrregularMark?: ToolbarAction;
+    readonly deficienciesLetter?: ToolbarAction;
+    readonly editInsured? : ToolbarAction;
+    readonly openSubprocess?: ToolbarAction;
+    readonly splitProcess?: ToolbarAction;
+    readonly subprocess?: ProcessInfo;
+    readonly letter?: ProcessInfo;
+    readonly saveProcess?: ToolbarAction;
+}
+
+export interface ProcessHistoricalToolbar extends ProcessToolbarBase {
+    readonly updatingWaitingPeriod: ToolbarAction;
+    readonly refreshProcess: ToolbarAction;
+    readonly resetWaitingPeriod: ToolbarAction;
+}
+
 export interface ProcessConfig {
     readonly processType: Model.ProcessType;
     readonly steps: ProcessStep[];
+    readonly infos: ProcessInfo[];
+    readonly regularToolbar?: (defaults: ProcessRegularToolbar) => ProcessRegularToolbar;
+    readonly historicalToolbar?: (defaults: ProcessHistoricalToolbar) => ProcessHistoricalToolbar;
 }
 
 export type ProcessConfiger = () => ProcessConfig;
