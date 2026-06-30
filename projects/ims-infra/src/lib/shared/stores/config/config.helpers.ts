@@ -42,7 +42,9 @@ export function configSliceFromProcessConfig(processConfig: ProcessConfig, isHis
     return {
         stepTabs,
         infoTabs,
-        toolbarButtons
+        toolbarButtons, 
+        processType: processConfig.processType,
+        processName: processConfig.processName
     };
 }
 

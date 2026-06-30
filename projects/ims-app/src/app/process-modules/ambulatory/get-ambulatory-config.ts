@@ -7,6 +7,7 @@ import { EnquiriesInfoComponent } from "./infos/enquiries-info/enquiries-info.co
 export function getAmbulatoryConfig(): ProcessConfig {
     return {
         processType: "AMBULATORY_HEALTH_CLAIM",
+        processName: "תביעות בריאות אמבולטורי",
         steps: [
             {
                 id: 'document', 

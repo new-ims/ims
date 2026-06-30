@@ -1,10 +1,12 @@
 import { Type } from "@angular/core";
-import { ProcessConfig } from "@ims";
+import { Model } from "@common";
 
 export interface ConfigSlice {
     readonly stepTabs: StepTab[];
     readonly infoTabs: InfoTab[];
     readonly toolbarButtons: ToolbarButton[];    
+    readonly processType: Model.ProcessType | null;
+    readonly processName: string;
 }
 
 export interface StepTab {
@@ -27,6 +29,8 @@ export interface ToolbarButton {
 export const initialConfigSlice: ConfigSlice = {
     stepTabs: [],
     infoTabs: [],
-    toolbarButtons: []
+    toolbarButtons: [], 
+    processType: null, 
+    processName: "",
 }
 

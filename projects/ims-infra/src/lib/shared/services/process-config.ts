@@ -52,6 +52,7 @@ export interface ProcessHistoricalToolbar extends ProcessToolbarBase {
 
 export interface ProcessConfig {
     readonly processType: Model.ProcessType;
+    readonly processName: string;
     readonly steps: ProcessStep[];
     readonly verifyInsured: boolean;
     readonly infos: ProcessInfo[];
