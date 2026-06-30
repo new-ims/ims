@@ -1,10 +1,34 @@
 :host {
-    display: flex;
-    flex-direction: column;    
     flex-grow: 1;
-    color: var(--p-500);
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "top-bar top-bar"
+        "insured-header insured-header"
+        "steps-tabs info-tabs";
 
-    pre {
-        background-color: var(--p-100);
+    app-top-bar {
+        grid-area: top-bar;
+    }
+    app-insured-header {
+        grid-area: insured-header;
+    }
+    app-toolbar {
+        position: absolute;
+        height: 100px;
+        width: 400px;
+        background: red;
+        bottom: 0;
+        width: 50%;
+    }
+
+    .steps {
+        grid-area: steps-tabs;
+        background: yellow;
+    }
+    .info {
+        grid-area: info-tabs;
+        background: green;
     }
 }

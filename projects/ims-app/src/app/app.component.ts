@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { ConfigStore, ImsShared } from '@ims';
+import { TopBarComponent } from './parts/top-bar/top-bar.component';
+import { InsuredHeaderComponent } from './parts/insured-header/insured-header.component';
+import { ToolbarComponent } from './parts/toolbar/toolbar.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [ImsShared],
+  imports: [ImsShared, TopBarComponent, InsuredHeaderComponent, ToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
