@@ -1,6 +1,8 @@
-<p>
-    This is my state:
-</p>
-<pre>
-    {{ store.config() | json }}
-</pre>
+@if (store.isInitialized()) {
+    <p>The Config is</p>
+    <pre>
+        {{store.config() | json}}
+    </pre>
+} @else {
+    Initializing config...
+}
