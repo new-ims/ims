@@ -1,8 +1,16 @@
 <ims-busy [if]="!store.isInitialized()" label="טוען..."></ims-busy>
 @if (store.isInitialized()) {
-    <p>The Config is</p>
+    <p>Steps</p>
     <pre>
-        {{store.config() | json}}
+        {{store.stepTabs() | json}}
+    </pre>
+    <p>Info Tabs</p>
+    <pre>
+        {{store.infoTabs() | json}}
+    </pre>
+    <p>Toolbar Buttons</p>
+    <pre>
+        {{store.toolbarButtons() | json}}
     </pre>
 } @else {
     Initializing config...

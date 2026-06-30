@@ -42,7 +42,7 @@ export class BootstrapService {
     const infos = config.infos;
     const verifyInsured = config.verifyInsured;
 
-    this.#configStore.setConfig(config);
+    this.#configStore.setConfig(config, output.isHistorical);
     console.log('BootstrapService finished');
   }
 }

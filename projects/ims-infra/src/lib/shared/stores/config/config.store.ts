@@ -2,16 +2,18 @@ import { patchState, signalStore, withComputed, withMethods, withState } from '@
 import { initialConfigSlice } from './config.slice';
 import { ProcessConfig } from '@ims';
 import { computed } from '@angular/core';
+import { configSliceFromProcessConfig } from './config.helpers';
 
 export const ConfigStore = signalStore(
   { providedIn: 'root' },
   withState(initialConfigSlice),
   withComputed((store) => ({
-    isInitialized: computed(() => store.config() !== null),
+    isInitialized: computed(() => store.stepTabs().length > 0 || store.infoTabs().length > 0 || store.toolbarButtons().length > 0),
   })),
   withMethods((store) => ({
-    setConfig(config: ProcessConfig) {
-      patchState(store, { config });
+    setConfig(config: ProcessConfig, isHistorical: boolean) {
+      const slice = configSliceFromProcessConfig(config, isHistorical);
+      patchState(store, slice);
     },
   })),
 );

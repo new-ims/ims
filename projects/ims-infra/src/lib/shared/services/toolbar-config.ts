@@ -1,4 +1,4 @@
-import { ProcessRegularToolbar } from "./process-config";
+import { ProcessHistoricalToolbar, ProcessRegularToolbar } from "./process-config";
 
 export const defaultRegularToolbar: ProcessRegularToolbar = {
     cancelProcess: () => {}, 
@@ -13,15 +13,11 @@ export const defaultRegularToolbar: ProcessRegularToolbar = {
     saveProcess: () => {}
 }
 
-export const defaultHistoricalToolbar: ProcessRegularToolbar = {
+export const defaultHistoricalToolbar: ProcessHistoricalToolbar = {
+    refreshProcess: () => {},
+    resetWaitingPeriod: () => {},
+    updatingWaitingPeriod: () => {},
     cancelProcess: () => {}, 
     comments: () => {},
-    contactCustomerService: () => {},
-    editInsured: () => {},
-    irregularMark: () => {},
-    redIrregularMark: () => {},
-    deficienciesLetter: () => {},
-    openSubprocess: () => {},
-    splitProcess: () => {},
-    saveProcess: () => {}
+    contactCustomerService: () => {}
 }
