@@ -1,4 +1,4 @@
-
+<ims-busy [if]="!store.isInitialized()" label="טוען..."></ims-busy>
 @if (store.isInitialized()) {
     <p>The Config is</p>
     <pre>
