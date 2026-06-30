@@ -3,6 +3,7 @@ import { initialConfigSlice } from './config.slice';
 import { ProcessConfig } from '@ims';
 import { computed } from '@angular/core';
 import { configSliceFromProcessConfig } from './config.helpers';
+import { updateState, withDevtools } from '@angular-architects/ngrx-toolkit';
 
 export const ConfigStore = signalStore(
   { providedIn: 'root' },
@@ -13,7 +14,8 @@ export const ConfigStore = signalStore(
   withMethods((store) => ({
     setConfig(config: ProcessConfig, isHistorical: boolean) {
       const slice = configSliceFromProcessConfig(config, isHistorical);
-      patchState(store, slice);
+      updateState(store, '[Config] Set Config', slice);
     },
   })),
+  withDevtools('ConfigStore')
 );
