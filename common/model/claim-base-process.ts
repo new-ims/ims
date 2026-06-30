@@ -1,19 +1,18 @@
+import { BaseProcess } from './base-process';
+import { DocumentPackageExtension, ScaledNumber } from './model.types';
+
 export interface ClaimProcess extends BaseProcess {
-    referantUserId: number;
-    referantUserName: string;
-    referantSerialNum: number;
-    dataChangedType: number;
-    replacementProcessCode: number;
-    superClaim: ISuperClaim;
-    getPoliciesDataFlag: boolean;
-    updateClaimsFlag: boolean;
-    deleteOperativeClaims: boolean;
-    claimDetailsUpdated: boolean;
-    continuesData: IContinuesData;
-    calculatedDateOverided: boolean;
-    skipLetterValidation3: boolean;
-    illnessStartDateChangedFlag: boolean;
-    refreshDataAfterSuspend: boolean;
-    documentPackageExtension: IDocumentPackageExtension;
-    requestedDocumentExtension: IRequestedDocumentExtension[];
+    readonly referantSerialNum: ScaledNumber;
+  readonly referantUserId: number;
+  readonly referantUserName: string;
+    // superClaim: ISuperClaim;
+  readonly getPoliciesDataFlag: boolean;
+  readonly updateClaimsFlag: boolean;
+  readonly deleteOperativeClaims: boolean;
+  readonly claimDetailsUpdated: boolean;
+  readonly calculatedDateOverided: boolean;
+  readonly skipLetterValidation3: boolean;
+  readonly illnessStartDateChangedFlag: boolean;
+  readonly refreshDataAfterSuspend: boolean;
+  readonly documentPackageExtension: DocumentPackageExtension;
 }
