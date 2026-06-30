@@ -166,20 +166,6 @@
     --ims-color-danger-950: #0c0404;
 }
 
-:not(:disabled):not(.ims-readonly):not(.ims-disabled) {
-
-    .ims-success {
-        color: var(--ims-color-success) !important;
-    }
-
-    .ims-warning {
-        color: var(--ims-color-warning) !important;
-    }
-
-    .ims-danger {
-        color: var(--ims-color-danger) !important;
-    }
-}
 
 
 

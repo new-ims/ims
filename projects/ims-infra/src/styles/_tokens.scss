@@ -1,0 +1,44 @@
+@mixin _go-properties {
+    --_primary: var(--primary, purple);
+    --_accent: var(--accent, orange);
+
+    --foreground-color: color-mix(in srgb, var(--_primary) 5%, black);
+    --background-color: color-mix(in srgb, var(--_primary) 5%, white);
+	--neutral-color: oklch(from var(--_primary) calc(l * 0.416) calc(c * 0.271) h);
+
+    	/* Neutral palette (11-step, derived from --neutral-color; 500 is pure) */
+	--n-0: color-mix(in srgb, var(--neutral-color) 4%, var(--background-color));
+	--n-100: color-mix(in srgb, var(--neutral-color) 15%, var(--background-color));
+	--n-200: color-mix(in srgb, var(--neutral-color) 30%, var(--background-color));
+	--n-300: color-mix(in srgb, var(--neutral-color) 48%, var(--background-color));
+	--n-400: color-mix(in srgb, var(--neutral-color) 72%, var(--background-color));
+	--n-500: var(--neutral-color);
+	--n-600: color-mix(in srgb, var(--neutral-color) 82%, var(--foreground-color));
+	--n-700: color-mix(in srgb, var(--neutral-color) 64%, var(--foreground-color));
+	--n-800: color-mix(in srgb, var(--neutral-color) 46%, var(--foreground-color));
+	--n-900: color-mix(in srgb, var(--neutral-color) 28%, var(--foreground-color));
+	--n-1000: color-mix(in srgb, var(--neutral-color) 14%, var(--foreground-color));
+
+	/* Primary palette (11-step, derived from --_primary; 500 is pure) */
+	--p-0: color-mix(in srgb, var(--_primary) 6%, var(--background-color));
+	--p-100: color-mix(in srgb, var(--_primary) 14%, var(--background-color));
+	--p-200: color-mix(in srgb, var(--_primary) 25%, var(--background-color));
+	--p-300: color-mix(in srgb, var(--_primary) 40%, var(--background-color));
+	--p-400: color-mix(in srgb, var(--_primary) 62%, var(--background-color));
+	--p-500: var(--_primary);
+	--p-600: color-mix(in srgb, var(--_primary) 86%, var(--foreground-color) 14%);
+	--p-700: color-mix(in srgb, var(--_primary) 70%, var(--foreground-color) 30%);
+	--p-800: color-mix(in srgb, var(--_primary) 52%, var(--foreground-color) 48%);
+	--p-900: color-mix(in srgb, var(--_primary) 34%, var(--foreground-color) 66%);
+	--p-1000: color-mix(in srgb, var(--_primary) 18%, var(--foreground-color) 82%);
+}
+
+@mixin go {
+    @if & {
+        @include _go-properties;
+    } @else {
+        :root {
+            @include _go-properties;
+        }
+    }
+}

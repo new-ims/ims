@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'core';
+
+:root {
+    --primary: #00005F;
+    --accent: #558a9d;
+}
+
+@include core.go;

@@ -1,0 +1,28 @@
+@use 'tokens';
+
+@mixin go {
+  @include tokens.go;
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  }
+
+  body {
+    @include tokens.go;
+    display: flex;
+    flex-direction: column;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--n-0);
+    color: var(--n-1000);
+  }
+}

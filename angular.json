@@ -85,6 +85,12 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/ims-app/src/styles", 
+                "projects/ims-infra/src/styles"
+              ]
+            },
             "browser": "projects/ims-app/src/main.ts",
             "tsConfig": "projects/ims-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
