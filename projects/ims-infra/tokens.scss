@@ -1,0 +1,186 @@
+
+:root {
+    --ims-color-primary: #00005F;
+
+    --ims-color-primary-hue-offset: calc(h - 10);
+    --ims-color-primary-50: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 90% 95%);
+    --ims-color-primary-100: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 88% 90%);
+    --ims-color-primary-150: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 86% 85%);
+    --ims-color-primary-200: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 84% 80%);
+    --ims-color-primary-250: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 82% 75%);
+    --ims-color-primary-300: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 80% 70%);
+    --ims-color-primary-350: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 78% 65%);
+    --ims-color-primary-400: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 76% 60%);
+    --ims-color-primary-450: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 74% 55%);
+    --ims-color-primary-500: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 72% 50%);
+    --ims-color-primary-550: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 70% 45%);
+    --ims-color-primary-600: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 68% 40%);
+    --ims-color-primary-650: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 66% 35%);
+    --ims-color-primary-700: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 64% 30%);
+    --ims-color-primary-750: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 62% 25%);
+    --ims-color-primary-800: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 60% 20%);
+    --ims-color-primary-850: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 58% 15%);
+    --ims-color-primary-900: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 56% 10%);
+    --ims-color-primary-950: hsl(from var(--ims-color-primary) var(--ims-color-primary-hue-offset) 54% 5%);
+}
+
+:root {
+    --ims-color-secondary: #cbf0c7;
+
+    --ims-color-secondary-50: #e5fde2;
+    --ims-color-secondary-100: #d1f0cd;
+    --ims-color-secondary-150: #bde2b9;
+    --ims-color-secondary-200: #aad4a6;
+    --ims-color-secondary-250: #98c694;
+    --ims-color-secondary-300: #87b882;
+    --ims-color-secondary-350: #76aa71;
+    --ims-color-secondary-400: #679c62;
+    --ims-color-secondary-450: #588e53;
+    --ims-color-secondary-500: #4a7f45;
+    --ims-color-secondary-550: #3c7138;
+    --ims-color-secondary-600: #30632c;
+    --ims-color-secondary-650: #245521;
+    --ims-color-secondary-700: #1a4817;
+    --ims-color-secondary-750: #103a0e;
+    --ims-color-secondary-800: #072d06;
+    --ims-color-secondary-850: #022002;
+    --ims-color-secondary-900: #001400;
+    --ims-color-secondary-950: #000900;
+}
+
+:root {
+    --ims-color-tertiary: #D6B15A;
+
+    --ims-color-tertiary-50: #FFFCF3;
+    --ims-color-tertiary-100: #FFF8E6;
+    --ims-color-tertiary-150: #FEF2D6;
+    --ims-color-tertiary-200: #FDECC4;
+    --ims-color-tertiary-250: #FBE5B2;
+    --ims-color-tertiary-300: #F7DFA0;
+    --ims-color-tertiary-350: #F2D58B;
+    --ims-color-tertiary-400: #EBCB78;
+    --ims-color-tertiary-450: #E2BE68;
+    --ims-color-tertiary-500: #D6B15A;
+    --ims-color-tertiary-550: #C8A24D;
+    --ims-color-tertiary-600: #B8913F;
+    --ims-color-tertiary-650: #A88135;
+    --ims-color-tertiary-700: #8E6D2C;
+    --ims-color-tertiary-750: #775A24;
+    --ims-color-tertiary-800: #654B1D;
+    --ims-color-tertiary-850: #543E18;
+    --ims-color-tertiary-900: #3B2A12;
+    --ims-color-tertiary-950: #251A0C;
+}
+
+:root {
+    --ims-color-neutral-50: hsl(from var(--ims-color-primary) h 8% 95%);
+    --ims-color-neutral-100: hsl(from var(--ims-color-primary) h 6% 90%);
+    --ims-color-neutral-150: hsl(from var(--ims-color-primary) h 6% 85%);
+    --ims-color-neutral-200: hsl(from var(--ims-color-primary) h 6% 80%);
+    --ims-color-neutral-250: hsl(from var(--ims-color-primary) h 6% 75%);
+    --ims-color-neutral-300: hsl(from var(--ims-color-primary) h 6% 70%);
+    --ims-color-neutral-350: hsl(from var(--ims-color-primary) h 6% 65%);
+    --ims-color-neutral-400: hsl(from var(--ims-color-primary) h 4% 60%);
+    --ims-color-neutral-450: hsl(from var(--ims-color-primary) h 4% 55%);
+    --ims-color-neutral-500: hsl(from var(--ims-color-primary) h 4% 50%);
+    --ims-color-neutral-550: hsl(from var(--ims-color-primary) h 4% 45%);
+    --ims-color-neutral-600: hsl(from var(--ims-color-primary) h 4% 40%);
+    --ims-color-neutral-650: hsl(from var(--ims-color-primary) h 4% 35%);
+    --ims-color-neutral-700: hsl(from var(--ims-color-primary) h 2% 30%);
+    --ims-color-neutral-750: hsl(from var(--ims-color-primary) h 2% 25%);
+    --ims-color-neutral-800: hsl(from var(--ims-color-primary) h 2% 20%);
+    --ims-color-neutral-850: hsl(from var(--ims-color-primary) h 2% 15%);
+    --ims-color-neutral-900: hsl(from var(--ims-color-primary) h 2% 10%);
+    --ims-color-neutral-950: hsl(from var(--ims-color-primary) h 2% 5%);
+}
+
+:root {
+    --ims-color-success: #00ec85;
+
+    --ims-color-success-50: #eaf9f2;
+    --ims-color-success-100: #c5f1dd;
+    --ims-color-success-150: #a1e8c8;
+    --ims-color-success-200: #7bdeb5;
+    --ims-color-success-250: #52d2a2;
+    --ims-color-success-300: #0fc691;
+    --ims-color-success-350: #00b684;
+    --ims-color-success-400: #00a577;
+    --ims-color-success-450: #00956b;
+    --ims-color-success-500: #00855f;
+    --ims-color-success-550: #007553;
+    --ims-color-success-600: #006648;
+    --ims-color-success-650: #00573d;
+    --ims-color-success-700: #004832;
+    --ims-color-success-750: #003a28;
+    --ims-color-success-800: #002d1e;
+    --ims-color-success-850: #002014;
+    --ims-color-success-900: #00130b;
+    --ims-color-success-950: #010804;
+}
+
+:root {
+    --ims-color-warning: #ff6404;
+
+    --ims-color-warning-50: #fff2ed;
+    --ims-color-warning-100: #ffddd0;
+    --ims-color-warning-150: #ffc8b2;
+    --ims-color-warning-200: #ffb192;
+    --ims-color-warning-250: #fb9c75;
+    --ims-color-warning-300: #f3885b;
+    --ims-color-warning-350: #e87543;
+    --ims-color-warning-400: #dc622a;
+    --ims-color-warning-450: #ce510a;
+    --ims-color-warning-500: #b94600;
+    --ims-color-warning-550: #a43d00;
+    --ims-color-warning-600: #8f3400;
+    --ims-color-warning-650: #7b2c00;
+    --ims-color-warning-700: #672300;
+    --ims-color-warning-750: #541b00;
+    --ims-color-warning-800: #421400;
+    --ims-color-warning-850: #300c00;
+    --ims-color-warning-900: #200600;
+    --ims-color-warning-950: #0b0402;
+}
+
+:root {
+    --ims-color-danger: #e4071e;
+
+    --ims-color-danger-50: #fff1f2;
+    --ims-color-danger-100: #ffdbdd;
+    --ims-color-danger-150: #ffc5c8;
+    --ims-color-danger-200: #ffadb3;
+    --ims-color-danger-250: #ff949e;
+    --ims-color-danger-300: #fe7888;
+    --ims-color-danger-350: #f46277;
+    --ims-color-danger-400: #e74d67;
+    --ims-color-danger-450: #d93858;
+    --ims-color-danger-500: #c9224a;
+    --ims-color-danger-550: #b7063e;
+    --ims-color-danger-600: #a10034;
+    --ims-color-danger-650: #8a002c;
+    --ims-color-danger-700: #740023;
+    --ims-color-danger-750: #5f001b;
+    --ims-color-danger-800: #4b0014;
+    --ims-color-danger-850: #37000c;
+    --ims-color-danger-900: #220207;
+    --ims-color-danger-950: #0c0404;
+}
+
+:not(:disabled):not(.ims-readonly):not(.ims-disabled) {
+
+    .ims-success {
+        color: var(--ims-color-success) !important;
+    }
+
+    .ims-warning {
+        color: var(--ims-color-warning) !important;
+    }
+
+    .ims-danger {
+        color: var(--ims-color-danger) !important;
+    }
+}
+
+
+
+
