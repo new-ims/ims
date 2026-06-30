@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ConfigStore } from '@ims';
 
 @Component({
   selector: 'app-top-bar',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.scss',
 })
-export class TopBarComponent {}
+export class TopBarComponent {
+  readonly store = inject(ConfigStore);
+}

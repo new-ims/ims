@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    background-color: var(--p-600);
+    color: var(--p-200);
+    gap: 1rem;
+    padding-inline: 1rem;
+
+    .brand {
+        font-weight: bold;
+    }
+    
+    .exit {
+        margin-inline-start: auto;
+        font-weight: bold;
+    }
+}
