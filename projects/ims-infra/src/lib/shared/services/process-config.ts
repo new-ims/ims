@@ -33,7 +33,7 @@ export interface ProcessToolbarBase {
 }
 
 export interface ProcessRegularToolbar extends ProcessToolbarBase {
-    readonly irregualMark?: ToolbarAction;
+    readonly irregularMark?: ToolbarAction;
     readonly redIrregularMark?: ToolbarAction;
     readonly deficienciesLetter?: ToolbarAction;
     readonly editInsured? : ToolbarAction;
