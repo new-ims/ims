@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ImsShared } from '@ims';
+import { Component, inject } from '@angular/core';
+import { ConfigStore, ImsShared } from '@ims';
 
 
 @Component({
@@ -8,4 +8,7 @@ import { ImsShared } from '@ims';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  readonly store = inject(ConfigStore);
+
+}
