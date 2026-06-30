@@ -37,6 +37,11 @@ export class BootstrapService {
     const configurer = await this.#registry(processType);
     const config = configurer();
     console.log('config: ', config);
+
+    const steps = config.steps;
+    const infos = config.infos;
+    const verifyInsured = config.verifyInsured;
+
     this.#configStore.setConfig(config);
     console.log('BootstrapService finished');
   }
