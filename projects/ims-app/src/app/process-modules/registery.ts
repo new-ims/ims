@@ -6,6 +6,11 @@ export const processRegistery: Registry = async (processType: Model.ProcessType)
         case "AMBULATORY_HEALTH_CLAIM":
             const { getAmbulatoryConfig } = await import("./ambulatory/get-ambulatory-config");
             return getAmbulatoryConfig;
+        
+        case "NURSING_CLAIM":
+            const { getNursingConfig } = await import("./nursing/get-nursing-config");
+            return getNursingConfig;
+
         default:
             throw new Error(`Process type ${processType} is not supported`);
     }
