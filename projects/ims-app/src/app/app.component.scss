@@ -1,3 +1,10 @@
 :host {
+    display: flex;
+    flex-direction: column;    
+    flex-grow: 1;
     color: var(--p-500);
+
+    pre {
+        background-color: var(--p-100);
+    }
 }
