@@ -39,7 +39,7 @@ export interface BaseSuperClaim {
     readonly needToCalculateType: number;
     readonly needToRefreshData: boolean;
     readonly firstDocArrivalDate: number;
-    // readonly operativeClaims: BaseOperativeClaim[];
+    readonly operativeClaims: BaseOperativeClaim[];
     readonly referantDecision: ReferantDecision;
     readonly contactPersons: readonly (ContactPerson)[];
     readonly superClaimCancelCloseDesc: string;

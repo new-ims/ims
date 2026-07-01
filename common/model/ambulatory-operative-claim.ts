@@ -7,7 +7,7 @@ import type { HealthClaimLine } from './health-claim-line';
 import type { ScaledNumber } from './scaled-number';
 import type { BaseOperativeClaim } from './base-operative-claim';
 
-export interface AmbulatoryOperativeClaim {
+export interface AmbulatoryOperativeClaim extends BaseOperativeClaim {
   readonly applicationOpenYear: number;
   readonly applicationTypeId: string;
   readonly approvalForForeclosure: number;
@@ -29,7 +29,6 @@ export interface AmbulatoryOperativeClaim {
   readonly claimType: CodeValue;
   readonly className: 'il.co.migdal.ins.ambulatory.model.AmbulatoryOperativeClaim';
   readonly collectiveId: number;
-  readonly company: string;
   readonly continuity: boolean;
   readonly createUserId: string;
   readonly currencyId: number;
