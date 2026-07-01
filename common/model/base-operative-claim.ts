@@ -1,3 +1,6 @@
+import type { CodeValue } from './code-value';
+import type { Company } from './model.types';
+
 export  interface BaseOperativeClaim {
   "@class": string;
     company: Company;
@@ -6,12 +9,10 @@ export  interface BaseOperativeClaim {
     claimStatus: CodeValue;
     overdueClaimCode: number;
     insuredId: number;
-    policies: IClaimPolicy[];
+    // policies: IClaimPolicy[];
     showCancelFlag: boolean;
     claimGroupNum: number;
-    paymentTemplates: IPaymentTemplate[];
-    irregularClaimMarks: IIrregularClaimMark[];
-    claimLines: IClaimLine[];
+    // claimLines: IClaimLine[];
     actionCode: string;
     insuredProfessionsAtEventDate: CodeValue[]
 }

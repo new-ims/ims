@@ -7,7 +7,7 @@ import type { HealthClaimLine } from './health-claim-line';
 import type { ScaledNumber } from './scaled-number';
 import type { BaseOperativeClaim } from './base-operative-claim';
 
-export interface AmbulatoryOperativeClaim extends BaseOperativeClaim {
+export interface AmbulatoryOperativeClaim {
   readonly applicationOpenYear: number;
   readonly applicationTypeId: string;
   readonly approvalForForeclosure: number;

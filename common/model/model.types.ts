@@ -44,3 +44,4 @@ export type Root = AmbulatoryHealthClaimProcess;
 export type Process = AmbulatoryHealthClaimProcess;
 // export type ProcessType = Process['processType'];
 export type ProcessType = 'AMBULATORY_HEALTH_CLAIM' | 'NURSING_CLAIM';
+export type Company = 'MIGDAL | MAKEFET';
