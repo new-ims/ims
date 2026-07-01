@@ -169,5 +169,119 @@
     ],
     "wasUserSessionDeleted": false,
     "wasActivatePerfomed": true
+  },
+  {
+    "resultCode": 0,
+    "resultDesc": "Success",
+    "messages": [],
+    "failed": false,
+    "userId": "ext-user-47603112",
+    "userDisplayName": "Sarah Rosenberg",
+    "userRoleTitle": "NURSE_EVALUATOR",
+    "authToken": "token-47603112-jkl012",
+    "userRoles": {
+      "ROLE_NURSE_EVALUATOR": true,
+      "ROLE_CLAIM_HANDLER": false
+    },
+    "userProfile": {
+      "operatorCode": 1004,
+      "roleSerialNum": 2004,
+      "roleCode": 9004,
+      "companyCode": 10,
+      "districtNum": 2,
+      "teamNum": 10,
+      "agentType": 5,
+      "agentNum": 88,
+      "insuredFactoryNum": 111,
+      "operatorRoleTitle": "NURSE_EVALUATOR",
+      "swSync": "SYNCED",
+      "requestId": 47603112,
+      "companyLevel": 2,
+      "operatorName": "Sarah Rosenberg",
+      "operatorUserName": "sarah.rosenberg"
+    },
+    "processKey": "47603112",
+    "processType": "NURSING_CLAIM",
+    "processTypeCode": 200,
+    "loanType": "NURSING",
+    "insuredId": 345678901,
+    "isHistorical": false,
+    "companyCode": 10,
+    "userSerialNumber": 1000004,
+    "sessionManagerData": {
+      "sessionId": "sess-47603112",
+      "source": "external-login"
+    },
+    "userAttributes": [
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 2,
+        "value": "Female"
+      },
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 55,
+        "value": "Home Nursing Care"
+      }
+    ],
+    "wasUserSessionDeleted": false,
+    "wasActivatePerfomed": true
+  },
+  {
+    "resultCode": 0,
+    "resultDesc": "Success",
+    "messages": [],
+    "failed": false,
+    "userId": "ext-user-47603113",
+    "userDisplayName": "Avraham Goldstein",
+    "userRoleTitle": "CARE_COORDINATOR",
+    "authToken": "token-47603113-mno345",
+    "userRoles": {
+      "ROLE_CARE_COORDINATOR": true,
+      "ROLE_NURSE_EVALUATOR": false
+    },
+    "userProfile": {
+      "operatorCode": 1005,
+      "roleSerialNum": 2005,
+      "roleCode": 9005,
+      "companyCode": 10,
+      "districtNum": 6,
+      "teamNum": 11,
+      "agentType": 6,
+      "agentNum": 99,
+      "insuredFactoryNum": 222,
+      "operatorRoleTitle": "CARE_COORDINATOR",
+      "swSync": "SYNCED",
+      "requestId": 47603113,
+      "companyLevel": 1,
+      "operatorName": "Avraham Goldstein",
+      "operatorUserName": "avraham.goldstein"
+    },
+    "processKey": "47603113",
+    "processType": "NURSING_CLAIM",
+    "processTypeCode": 201,
+    "loanType": "NURSING",
+    "insuredId": 456789012,
+    "isHistorical": false,
+    "companyCode": 10,
+    "userSerialNumber": 1000005,
+    "sessionManagerData": {
+      "sessionId": "sess-47603113",
+      "source": "external-login"
+    },
+    "userAttributes": [
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1,
+        "value": "Male"
+      },
+      {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 77,
+        "value": "Long-term Nursing"
+      }
+    ],
+    "wasUserSessionDeleted": false,
+    "wasActivatePerfomed": false
   }
 ]
