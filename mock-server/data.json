@@ -196,5 +196,137 @@
         "value": "Rehabilitation"
       }
     }
+  },
+  {
+    "className": "il.co.migdal.ins.nursing.model.NursingClaimProcess",
+    "processKey": "47603112",
+    "processType": "NURSING_CLAIM",
+    "status": 1,
+    "step": 2,
+    "stepName": "NURSING_ASSESSMENT",
+    "module": "NURSING_CLAIMS",
+    "company": "MIGDAL",
+    "taskName": "NURSE_EVALUATOR",
+    "taskId": "47772885",
+    "creationDate": "2026-04-05T09:15:43.200+0000",
+    "insured": {
+      "className": "il.co.migdal.ins.entities.person.insured.Insured",
+      "identity": 345678901,
+      "identityType": "IDENTITY_NUMBER",
+      "firstName": "Sarah",
+      "lastName": "Rosenberg",
+      "birthDate": "1962-08-14T21:00:00.000+0000",
+      "gender": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 2,
+        "value": "Female"
+      }
+    },
+    "policies": [
+      {
+        "className": "il.co.migdal.ins.shared.model.HealthClaimPolicy",
+        "policyID": 4444444,
+        "coverages": [
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 4444444,
+            "coverID": 888,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 55,
+              "value": "Home Nursing Care"
+            },
+            "statusDesciption": "Active",
+            "selected": true
+          },
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 4444444,
+            "coverID": 999,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 66,
+              "value": "Nursing Equipment"
+            },
+            "statusDesciption": "Active",
+            "selected": false
+          }
+        ]
+      }
+    ],
+    "claimAdditionalData": {
+      "className": "il.co.migdal.ins.shared.model.ClaimAdditionalData",
+      "claimType": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 4,
+        "value": "Nursing Care"
+      }
+    }
+  },
+  {
+    "className": "il.co.migdal.ins.nursing.model.NursingClaimProcess",
+    "processKey": "47603113",
+    "processType": "NURSING_CLAIM",
+    "status": 0,
+    "step": 3,
+    "stepName": "CARE_PLAN_REVIEW",
+    "module": "NURSING_CLAIMS",
+    "company": "MIGDAL",
+    "taskName": "CARE_COORDINATOR",
+    "taskId": "47772886",
+    "creationDate": "2026-05-20T15:42:18.450+0000",
+    "insured": {
+      "className": "il.co.migdal.ins.entities.person.insured.Insured",
+      "identity": 456789012,
+      "identityType": "IDENTITY_NUMBER",
+      "firstName": "Avraham",
+      "lastName": "Goldstein",
+      "birthDate": "1945-12-03T22:00:00.000+0000",
+      "gender": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 1,
+        "value": "Male"
+      }
+    },
+    "policies": [
+      {
+        "className": "il.co.migdal.ins.shared.model.HealthClaimPolicy",
+        "policyID": 5555555,
+        "coverages": [
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 5555555,
+            "coverID": 1010,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 77,
+              "value": "Long-term Nursing"
+            },
+            "statusDesciption": "Active",
+            "selected": true
+          },
+          {
+            "className": "il.co.migdal.ins.shared.model.HealthClaimCoverage",
+            "policyID": 5555555,
+            "coverID": 1111,
+            "rate": {
+              "className": "il.co.migdal.ins.entities.common.CodeValue",
+              "code": 88,
+              "value": "Palliative Care"
+            },
+            "statusDesciption": "Active",
+            "selected": false
+          }
+        ]
+      }
+    ],
+    "claimAdditionalData": {
+      "className": "il.co.migdal.ins.shared.model.ClaimAdditionalData",
+      "claimType": {
+        "className": "il.co.migdal.ins.entities.common.CodeValue",
+        "code": 5,
+        "value": "Extended Nursing Services"
+      }
+    }
   }
 ]
