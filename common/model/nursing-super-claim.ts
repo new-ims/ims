@@ -1,3 +1,5 @@
+import { BaseSuperClaim } from "./base-super-claim";
+
 export interface NursingSuperClaim extends BaseSuperClaim {
   "@class": string;
   operativeClaims: INursingOperativeClaim[];

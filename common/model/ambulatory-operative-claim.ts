@@ -5,8 +5,9 @@ import type { CodeValue } from './code-value';
 import type { HealthClaimBankAccount } from './health-claim-bank-account';
 import type { HealthClaimLine } from './health-claim-line';
 import type { ScaledNumber } from './scaled-number';
+import type { BaseOperativeClaim } from './base-operative-claim';
 
-export interface AmbulatoryOperativeClaim {
+export interface AmbulatoryOperativeClaim extends BaseOperativeClaim {
   readonly applicationOpenYear: number;
   readonly applicationTypeId: string;
   readonly approvalForForeclosure: number;
