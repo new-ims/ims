@@ -2,10 +2,10 @@ import { BaseProcess } from './base-process';
 import { DocumentPackageExtension, ScaledNumber } from './model.types';
 
 export interface ClaimProcess extends BaseProcess {
-    readonly referantSerialNum: ScaledNumber;
+  readonly referantSerialNum: ScaledNumber;
   readonly referantUserId: number;
   readonly referantUserName: string;
-    // superClaim: ISuperClaim;
+  // superClaim: ISuperClaim;
   readonly getPoliciesDataFlag: boolean;
   readonly updateClaimsFlag: boolean;
   readonly deleteOperativeClaims: boolean;

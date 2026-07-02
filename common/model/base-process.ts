@@ -1,14 +1,24 @@
-import {Model} from "../model";
-import { DocumentsPackage, Insured, ISODateTimeString, Modify, ProcessType, ScaledNumber, Transmission } from "./model.types";
+import { Model } from '../model';
+import { Company } from './company';
+import {
+  DocumentsPackage,
+  Insured,
+  ISODateTimeString,
+  Modify,
+  ProcessType,
+  ScaledNumber,
+  Transmission,
+} from './model.types';
 export interface BaseProcess {
-    readonly "@class": string;
-    readonly id: number;
+  readonly '@class': string;
+  readonly id: number;
   readonly module: string;
-    readonly version: number;
+  readonly version: number;
   readonly processKey: string;
+  readonly company: Company;
   readonly creationDate: ISODateTimeString;
   readonly lastModify: Modify;
-    readonly status: number;
+  readonly status: number;
   readonly step: number;
   readonly stepName: string;
   readonly taskName: string;
@@ -17,15 +27,13 @@ export interface BaseProcess {
   readonly taskIdPrevious: string;
   readonly taskNamePrevious: string;
   readonly selectedTab: string;
-  readonly  processType: ProcessType;
-  readonly company: string;
   readonly transmission: Transmission;
   readonly insured: Insured;
   readonly documentsPackage: DocumentsPackage;
   readonly creatorId: ScaledNumber;
   readonly clerkSerialNum: ScaledNumber;
-      readonly clerkId: ScaledNumber;
-    readonly messages: Model.Message[];
+  readonly clerkId: ScaledNumber;
+  readonly messages: Model.Message[];
   readonly kycIncomeSourceRequired: boolean;
   readonly kycIndirect: boolean;
   readonly kycRequired: boolean;

@@ -1,6 +1,7 @@
 // Auto-generated from samples/model.json
 
 import { AmbulatoryHealthClaimProcess } from './ambulatory-health-claim-process';
+import { NursingClaimProcess } from './nursing-claim-process';
 
 export type { Address } from './address';
 export type { Agent } from './agent';
@@ -8,9 +9,14 @@ export type { AgentType } from './agent-type';
 export type { AmbulatoryHealthClaimProcess } from './ambulatory-health-claim-process';
 export type { AmbulatoryOperativeClaim } from './ambulatory-operative-claim';
 export type { AmbulatorySuperClaim } from './ambulatory-super-claim';
+export type { BaseOperativeClaim } from './base-operative-claim';
+export type { BasePolicy } from './base-policy';
+export type { BaseProcess } from './base-process';
+export type { BaseSuperClaim } from './base-super-claim';
 export type { ClaimAdditionalData } from './claim-additional-data';
 export type { ClaimPaymentDetails } from './claim-payment-details';
 export type { CodeValue } from './code-value';
+export type { Company } from './company';
 export type { ContactPerson } from './contact-person';
 export type { DocumentMissingReasons } from './document-missing-reasons';
 export type { DocumentPackageExtension } from './document-package-extension';
@@ -28,6 +34,7 @@ export type { ImageMasavData } from './image-masav-data';
 export type { Insured } from './insured';
 export type { Message } from './message.model';
 export type { Modify } from './modify';
+export type { NursingClaimProcess } from './nursing-claim-process';
 export type { ProcessLetterData } from './process-letter-data';
 export { PROCESS_MESSAGE_TYPES } from './process-message.model';
 export type { ProcessMessage, ProcessMessageType } from './process-message.model';
@@ -41,7 +48,5 @@ export type { ISODateTimeString } from './atoms';
 
 
 export type Root = AmbulatoryHealthClaimProcess;
-export type Process = AmbulatoryHealthClaimProcess;
-// export type ProcessType = Process['processType'];
-export type ProcessType = 'AMBULATORY_HEALTH_CLAIM' | 'NURSING_CLAIM';
-export type Company = 'MIGDAL | MAKEFET';
+export type Process = AmbulatoryHealthClaimProcess | NursingClaimProcess;
+export type ProcessType = Process['processType'];

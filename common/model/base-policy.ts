@@ -1,13 +1,12 @@
-import type { Agent } from "./agent";
-import type { Company } from "./model.types";
-import type { ISODateTimeString } from "./atoms";
-import type { ScaledNumber } from "./scaled-number";
+import type { Agent } from './agent';
+import type { Company } from './model.types';
+import type { ISODateTimeString } from './atoms';
+import type { ScaledNumber } from './scaled-number';
 
 export interface BasePolicy {
-    readonly "@class": string;
-      readonly policyId: number;
-  readonly company: Company;
-    readonly factoryId: number;
+  readonly '@class': string;
+  readonly policyId: number;
+  readonly factoryId: number;
   readonly fundId: number;
   readonly agent: Agent;
   readonly insuranceStartDate: ISODateTimeString;
@@ -16,7 +15,7 @@ export interface BasePolicy {
   readonly retirementType: number;
   readonly pensionInvestmentCode: number;
   readonly pensionPlan: number;
-    readonly transferFund: number;
+  readonly transferFund: number;
   readonly paymentType: number;
   readonly investmentType: number;
   readonly msTzuratTashlum: ScaledNumber;
