@@ -1,8 +1,12 @@
 import { Model } from "@common";
-import { StepTab } from "../config/config.slice";
+import { InfoTab, StepTab } from "../config/config.slice";
 import { PROCESS_KNOWN } from "@ims";
 
 export interface StepState extends StepTab {
+    readonly state: 'disabled' | 'enabled' | 'selected';
+}
+
+export interface InfoState  extends InfoTab {
     readonly state: 'disabled' | 'enabled' | 'selected';
 }
 

@@ -4,7 +4,7 @@ import { Model } from '@common';
 import { updateState, withDevtools } from '@angular-architects/ngrx-toolkit';
 import { computed, inject } from '@angular/core';
 import { processToDetailsVm } from './process.vm';
-import { modifyProcess, resetProcess, setSelectedTab } from './process.updaters';
+import { modifyProcess, resetProcess, setSelectedInfoTab, setSelectedTab } from './process.updaters';
 import { ConfigStore } from '../config/config.store';
 import { buildStepStates } from './process.helpers';
 
@@ -32,6 +32,13 @@ export const ProcessStore = signalStore(
       const step = steps.find(s => s.name === tabName);
       if (step && step.state === 'enabled') {
         updateState(store, '[Process] setSelectedTab', setSelectedTab(tabName));
+      }
+    },
+    setSelectedInfoTab(tabId: string) {
+      const infos = store._config.infoTabs();
+      const info = infos.find(i => i.id === tabId);
+      if (info) {
+        updateState(store, '[Process] setSelectedInfoTab', setSelectedInfoTab(tabId));
       }
     }
   })),

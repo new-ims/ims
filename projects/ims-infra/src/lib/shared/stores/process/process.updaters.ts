@@ -34,3 +34,9 @@ export function setSelectedTab(tabName: string): PartialStateUpdater<ProcessSlic
         };
     }
 }
+
+export function setSelectedInfoTab(tabId: string): PartialStateUpdater<ProcessSlice> {
+    return (state) => ({
+      selectedInfoTabId: tabId,  
+    })
+}
