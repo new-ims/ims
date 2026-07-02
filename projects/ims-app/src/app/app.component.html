@@ -3,6 +3,8 @@
     <app-top-bar/>
     <app-insured-header/>
     <app-toolbar/>
-    <div class="steps"></div>
+    <div class="steps">
+        {{ processStore.steps() | json }}
+    </div>
     <div class="info"></div>
 } 

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ConfigStore, ImsShared } from '@ims';
+import { ConfigStore, ImsShared, ProcessStore } from '@ims';
 import { TopBarComponent } from './parts/top-bar/top-bar.component';
 import { InsuredHeaderComponent } from './parts/insured-header/insured-header.component';
 import { ToolbarComponent } from './parts/toolbar/toolbar.component';
@@ -13,5 +13,6 @@ import { ToolbarComponent } from './parts/toolbar/toolbar.component';
 })
 export class AppComponent {
   readonly store = inject(ConfigStore);
+  readonly processStore = inject(ProcessStore);
 
 }
