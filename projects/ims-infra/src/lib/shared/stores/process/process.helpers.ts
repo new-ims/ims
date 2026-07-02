@@ -7,6 +7,6 @@ export interface StepState extends StepTab {
     readonly isEnabled: boolean;
 }
 
-export function buildStepStates(configSteps: StepTab[], process: Model.Process | null) {
-    
+export function buildStepStates(configSteps: StepTab[], process: Model.Process | null): StepState[] {
+    return [];    
 }
