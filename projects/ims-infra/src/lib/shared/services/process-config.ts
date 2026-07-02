@@ -63,3 +63,11 @@ export interface ProcessConfig {
 export type ProcessConfiger = () => ProcessConfig;
 export type Registry = (processType: Model.ProcessType) => Promise<ProcessConfiger>;
 export const REGISTRY_TOKEN = new InjectionToken<Registry>('REGISTRY_TOKEN');
+
+
+export const PROCESS_KNOWN = {
+    APPROVAL_STEP: 'approval',
+    APPROVAL_TASK: 'APPROVAL',
+    COMPLETED_TASK: 'COMPLETED',
+    CANCELED_TASK: 'CANCELED'
+}

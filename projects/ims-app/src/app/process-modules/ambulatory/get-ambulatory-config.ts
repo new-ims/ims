@@ -1,4 +1,4 @@
-import { ProcessConfig } from "@ims";
+import { PROCESS_KNOWN, ProcessConfig } from "@ims";
 import { DocumentStepComponent } from "./steps/document-step/document-step.component";
 import { InsuredRequestStepComponent } from "./steps/insured-request-step/insured-request-step.component";
 import { DocumentInfoComponent } from "./infos/document-info/document-info.component";
@@ -46,7 +46,7 @@ export function getAmbulatoryConfig(): ProcessConfig {
                 component: DocumentStepComponent
             }, 
             {
-                id: 'approval', 
+                id: PROCESS_KNOWN.APPROVAL_STEP, 
                 label: 'גורם מאשר',
                 component: DocumentStepComponent
             }

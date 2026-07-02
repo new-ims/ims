@@ -1,4 +1,4 @@
-import { ProcessConfig } from '@ims';
+import { PROCESS_KNOWN, ProcessConfig } from '@ims';
 import { DocumentStepComponent } from './steps/document-step/document-step.component';
 import { PoliciesStepComponent } from './steps/policies-step/policies-step.component';
 import { HistoryComponent } from './infos/history/history.component';
@@ -46,7 +46,7 @@ export function getNursingConfig(): ProcessConfig {
         component: DocumentStepComponent,
       }, 
       {
-        id: 'approval',
+        id: PROCESS_KNOWN.APPROVAL_STEP,
         label: 'אישור',
         component: DocumentStepComponent,
       }
