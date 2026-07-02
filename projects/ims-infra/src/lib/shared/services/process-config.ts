@@ -12,6 +12,7 @@ export interface ProcessStep {
     readonly id: number;
     readonly name: string;
     readonly label: string;
+    readonly alwaysEnabled?: boolean;
     readonly component: Type<any>;
     readonly onEnter?: OnEnterHook;
     readonly onComplete?: OnCompleteHook;

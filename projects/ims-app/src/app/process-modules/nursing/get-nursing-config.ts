@@ -13,12 +13,14 @@ export function getNursingConfig(): ProcessConfig {
         id: 1,
         name: 'details',
         label: 'פרטי תביעה',
+        alwaysEnabled: true,
         component: DocumentStepComponent,
       },
       {
         id: 2,
         name: 'document',
         label: 'מסמכים',
+        alwaysEnabled: true,
         component: DocumentStepComponent,
         onEnter: () => {
           console.log('Entering document step');

@@ -33,6 +33,7 @@ export function configSliceFromProcessConfig(processConfig: ProcessConfig, isHis
         id: step.id,
         name: step.name,
         label: step.label,
+        alwaysEnabled: step.alwaysEnabled || false,
         component: step.component
     }));
 

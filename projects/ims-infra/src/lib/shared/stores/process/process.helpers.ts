@@ -25,8 +25,8 @@ export function buildStepStates(configSteps: StepTab[], process: Model.Process |
 
     const states: (StepState | null)[] = configSteps.map((step, index) => {
         if (index === selectedIndex) return {...step, state: 'selected'};
+        if (step.alwaysEnabled) return {...step, state: 'enabled'};
         if (!shouldBeVisible(process, step)) return null;
-        
         // it's visible and not selected, so now lets decide about enabled
         if (index <= enabledIndex) return {...step, state: 'enabled'};
         return {...step, state: 'disabled'};

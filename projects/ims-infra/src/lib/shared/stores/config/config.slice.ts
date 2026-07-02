@@ -13,6 +13,7 @@ export interface StepTab {
     readonly id: number;
     readonly name: string;
     readonly label: string;
+    readonly alwaysEnabled: boolean;
     readonly component: Type<any>;
 }
 
