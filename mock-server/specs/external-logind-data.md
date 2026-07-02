@@ -1,1 +1,0 @@
-We need you to create data file - external-login-data.json - that contains three objects of a type ExternalLoginOutput. use random values, but create an object for every processKey that you have in data.json. if there is same fields use the data from data.json  
