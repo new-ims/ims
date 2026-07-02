@@ -8,8 +8,8 @@ export interface OutputBase {
 
 }
 
-export interface ProcessServiceOutputBase extends OutputBase {
-    readonly baseProcess: Model.Root;
+export interface ProcessServiceOutputBase<T extends Model.ProcessType> extends OutputBase {
+    readonly baseProcess: Model.ProcessOfType<T>;
     readonly processMessage: Model.ProcessMessage[];
     readonly invalidTabString: string[];
 }

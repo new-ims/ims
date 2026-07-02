@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Service } from "@angular/core";
-import { Api } from "@common";
+import { Api, Model } from "@common";
 import { firstValueFrom } from "rxjs";
 
 
@@ -9,8 +9,8 @@ export class ApiService {
     readonly #baseUrl = 'http://localhost:3001';
     readonly #http = inject(HttpClient);
 
-    getProcess(input: Api.GetProcessInput): Promise<Api.GetProcessOutput> {
-        const res = this.#http.post<Api.GetProcessOutput>(
+    getProcess<T extends Model.ProcessType>(input: Api.GetProcessInput<T>): Promise<Api.GetProcessOutput<T>> {
+        const res = this.#http.post<Api.GetProcessOutput<T>>(
             `${this.#baseUrl}/processServiceFacade/getProcess`, input);
         return firstValueFrom(res);
     }
