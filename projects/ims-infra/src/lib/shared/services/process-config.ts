@@ -9,7 +9,8 @@ export type OnEnterHook = () => MaybeAsyncVoid;
 export type OnCompleteHook = () => MaybeAsyncVoid;
 
 export interface ProcessStep {
-    readonly id: string;
+    readonly id: number;
+    readonly name: string;
     readonly label: string;
     readonly component: Type<any>;
     readonly onEnter?: OnEnterHook;

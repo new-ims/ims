@@ -31,6 +31,7 @@ export function configSliceFromProcessConfig(processConfig: ProcessConfig, isHis
     }));
     const stepTabs = processConfig.steps.map(step => ({
         id: step.id,
+        name: step.name,
         label: step.label,
         component: step.component
     }));

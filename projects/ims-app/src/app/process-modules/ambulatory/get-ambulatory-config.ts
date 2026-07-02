@@ -10,12 +10,14 @@ export function getAmbulatoryConfig(): ProcessConfig {
         processName: "תביעות בריאות אמבולטורי",
         steps: [
             {
-                id: 'details', 
+                id: 1,
+                name: 'details', 
                 label: 'פרטי תביעה',
                 component: DocumentStepComponent
             },
             {
-                id: 'document', 
+                id: 2,
+                name: 'document', 
                 label: 'מסמכים',
                 component: DocumentStepComponent, 
                 onEnter: () => {
@@ -26,27 +28,32 @@ export function getAmbulatoryConfig(): ProcessConfig {
                 }
             }, 
             {
-                id: 'insured-request', 
+                id: 3,
+                name: 'insured-request', 
                 label: 'בקשות מבוטח', 
                 component: InsuredRequestStepComponent
             }, 
             {
-                id: 'policies', 
+                id: 4,
+                name: 'policies', 
                 label: 'פוליסות',
                 component: DocumentStepComponent
             }, 
             {
-                id: 'decision', 
+                id: 5,
+                name: 'decision', 
                 label: 'החלטה',
                 component: DocumentStepComponent
             }, 
             {
-                id: 'payments',
+                id: 6,
+                name: 'payments',
                 label: 'תשלומים',
                 component: DocumentStepComponent
             }, 
             {
-                id: PROCESS_KNOWN.APPROVAL_STEP, 
+                id: 7,
+                name: PROCESS_KNOWN.APPROVAL_STEP, 
                 label: 'גורם מאשר',
                 component: DocumentStepComponent
             }

@@ -10,12 +10,14 @@ export function getNursingConfig(): ProcessConfig {
     processName: 'תביעת סיעוד ',
     steps: [
       {
-        id: 'details',
+        id: 1,
+        name: 'details',
         label: 'פרטי תביעה',
         component: DocumentStepComponent,
       },
       {
-        id: 'document',
+        id: 2,
+        name: 'document',
         label: 'מסמכים',
         component: DocumentStepComponent,
         onEnter: () => {
@@ -26,27 +28,32 @@ export function getNursingConfig(): ProcessConfig {
         },
       },
       {
-        id: 'policies',
+        id: 3,
+        name: 'policies',
         label: 'פוליסות בתביעה',
         component: PoliciesStepComponent,
       },
       {
-        id: 'doctor-recommendation',
+        id: 4,
+        name: 'doctor-recommendation',
         label: 'החלטת רופא',
         component: DocumentStepComponent,
       }, 
       {
-        id: 'decision',
+        id: 5,
+        name: 'decision',
         label: 'החלטת החברה',
         component: DocumentStepComponent,        
       }, 
       {
-        id: 'templates',
+        id: 6,
+        name: 'templates',
         label: 'שבלונות',
         component: DocumentStepComponent,
       }, 
       {
-        id: PROCESS_KNOWN.APPROVAL_STEP,
+        id: 7,
+        name: PROCESS_KNOWN.APPROVAL_STEP,
         label: 'אישור',
         component: DocumentStepComponent,
       }

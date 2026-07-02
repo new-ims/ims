@@ -10,7 +10,8 @@ export interface ConfigSlice {
 }
 
 export interface StepTab {
-    readonly id: string;
+    readonly id: number;
+    readonly name: string;
     readonly label: string;
     readonly component: Type<any>;
 }
