@@ -22,3 +22,15 @@ export function modifyProcess(modifier: ProcessModifier): PartialStateUpdater<Pr
         };
     }
 }
+
+export function setSelectedTab(tabName: string): PartialStateUpdater<ProcessSlice> {
+    return (state) => {
+        if (!state.process) {
+            return state;
+        }
+        const changedProcess = { ...state.process, selectedTab: tabName };
+        return {
+            process: changedProcess,
+        };
+    }
+}
