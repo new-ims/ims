@@ -50,7 +50,7 @@ export class BootstrapService {
       type: loginOutput.processType
     });
 
-    this.#processStore.setProcess(processOutput.baseProcess);
+    this.#processStore.resetProcess(processOutput.baseProcess);
     console.log('BootstrapService finished');
   }
 }
