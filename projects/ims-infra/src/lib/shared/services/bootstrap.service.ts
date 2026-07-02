@@ -2,12 +2,14 @@ import { inject, Service } from '@angular/core';
 import { ApiService } from './api.service';
 import { REGISTRY_TOKEN } from './process-config';
 import { ConfigStore } from '../stores/config/config.store';
+import { ProcessStore } from '../stores/process/process.store';
 
 @Service()
 export class BootstrapService {
   readonly #api = inject(ApiService);
   readonly #registry = inject(REGISTRY_TOKEN);
   readonly #configStore = inject(ConfigStore);
+  readonly #processStore = inject(ProcessStore);
 
   #delay(millis: number) {
     return new Promise((resolve) => setTimeout(resolve, millis));
@@ -41,16 +43,14 @@ export class BootstrapService {
     console.log('config: ', config);
 
     this.#configStore.setConfig(config, loginOutput.isHistorical);
-    const process = await this.#api.getProcess({
+    const processOutput = await this.#api.getProcess({
       processKey: loginOutput.processKey,
       processType: loginOutput.processType,
       readonlyLevel: 'NONE', 
       type: loginOutput.processType
     });
 
-    console.log('Process output:', process);
-
-
+    this.#processStore.setProcess(processOutput.baseProcess);
     console.log('BootstrapService finished');
   }
 }

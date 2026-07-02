@@ -2,5 +2,6 @@
 
 export interface Gender {
   readonly className: 'il.co.migdal.ins.entities.person.Gender';
-  readonly type: number;
+  readonly code: number;
+  readonly value: 'Male' | 'Female';
 }
