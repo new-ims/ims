@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  align-items: center;
+  padding-inline: 1rem;
+  gap: 2.5rem;
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .value {
+        color: var(--p-800);        
+    }
+    .key {
+        font-size: 0.7em;
+        color: var(--text-muted-color);
+
+    }
+  }
+}

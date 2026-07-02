@@ -31,6 +31,9 @@
 	--p-800: color-mix(in srgb, var(--_primary) 52%, var(--foreground-color) 48%);
 	--p-900: color-mix(in srgb, var(--_primary) 34%, var(--foreground-color) 66%);
 	--p-1000: color-mix(in srgb, var(--_primary) 18%, var(--foreground-color) 82%);
+
+	--text-color: var(--n-800);
+	--text-muted-color: var(--n-300);
 }
 
 @mixin go {

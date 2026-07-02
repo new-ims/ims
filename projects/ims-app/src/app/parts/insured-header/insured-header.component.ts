@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProcessStore } from '@ims';
 
 @Component({
   selector: 'app-insured-header',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './insured-header.component.html',
   styleUrl: './insured-header.component.scss',
 })
-export class InsuredHeaderComponent {}
+export class InsuredHeaderComponent {
+  readonly store = inject(ProcessStore);
+}

@@ -1,4 +1,5 @@
 import { Model } from "@common";
+import { formatToIsraeliDate } from "./../../../../tools"
 
 export interface ProcessDetailsVm {
     readonly insuredDisplayName: string;
@@ -26,12 +27,15 @@ export function processToDetailsVm(process: Model.Process | null): ProcessDetail
     const displayName = `${insured.firstName} ${insured.lastName}`;
     const gender = GENDER_NAME_MAP[insured.gender.value];
     const birthDate = insured.birthDate;
+
+    // convert the date into format of dd/MM/yyyy by parsing the date string and formatting it accordingly
+    const formattedBirthDate = formatToIsraeliDate(birthDate);
     const id = insured.identity.toString();
 
     return {
         insuredDisplayName: displayName,
         insuredId: id,
         insuredGender: gender,
-        insuredBirthDate: birthDate,
+        insuredBirthDate: formattedBirthDate,
     };
 }

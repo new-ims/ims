@@ -1,1 +1,26 @@
-<p>insured-header works!</p>
+@let vm = store.details();
+
+<div class="cell name">
+  <div class="value">
+    {{ vm.insuredDisplayName }}
+  </div>
+  <div class="key">שם</div>
+</div>
+<div class="cell id">
+  <div class="value">
+    {{ vm.insuredId }}
+  </div>
+  <div class="key">ת.ז.</div>
+</div>
+<div class="cell gender">
+  <div class="value">
+    {{ vm.insuredGender }}
+  </div>
+  <div class="key">מין</div>
+</div>
+<div class="cell birth-date">
+  <div class="value">
+    {{ vm.insuredBirthDate }}
+  </div>
+  <div class="key">תאריך לידה</div>
+</div>
