@@ -1,0 +1,20 @@
+@let tabs = store.steps();
+
+<div class="tabs-strip">
+    @for(tab of tabs; track tab.id) {
+        <div class="tab" 
+            [class.enabled]="tab.state === 'enabled'"
+            [class.selected]="tab.state === 'selected'"
+            [class.disabled]="tab.state === 'disabled'"   
+            (click)="store.setSelectedTab(tab.name)"         
+            >
+            {{tab.label}}
+        </div>
+    }
+</div>
+<div class="tab-content">
+    @let componentType = store.selectedStep()?.component;
+    @if(componentType) {
+        <ng-container *ngComponentOutlet="componentType" />
+    }
+</div>

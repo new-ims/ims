@@ -14,10 +14,12 @@ export const ProcessStore = signalStore(
   withProps(_ => ({
     _config: inject(ConfigStore),
   })),
-  withComputed((store) => ({
-    details: computed(() => processToDetailsVm(store.process())),
-    steps: computed(() => buildStepStates(store._config.stepTabs(), store.process()))
-  })),
+  withComputed((store) => {
+    const details = computed(() => processToDetailsVm(store.process()));
+    const steps = computed(() => buildStepStates(store._config.stepTabs(), store.process()));
+    const selectedStep = computed(() => steps().find(s => s.state === 'selected') || null);
+    return { details, steps, selectedStep };
+  }),
   withMethods((store) => ({
     resetProcess(process: Model.Process) {
       updateState(store, '[Process] setProcess', resetProcess(process));

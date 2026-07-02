@@ -23,9 +23,8 @@
         width: 50%;
     }
 
-    .steps {
+    app-process-step-tabs {
         grid-area: steps-tabs;
-        background: yellow;
     }
     .info {
         grid-area: info-tabs;

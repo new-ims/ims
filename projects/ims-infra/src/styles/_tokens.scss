@@ -2,12 +2,12 @@
     --_primary: var(--primary, purple);
     --_accent: var(--accent, orange);
 
-    --foreground-color: color-mix(in srgb, var(--_primary) 5%, black);
-    --background-color: color-mix(in srgb, var(--_primary) 5%, white);
+    --foreground-color: color-mix(in srgb, var(--_primary) 2%, black);
+    --background-color: color-mix(in srgb, var(--_primary) 2%, white);
 	--neutral-color: oklch(from var(--_primary) calc(l * 0.416) calc(c * 0.271) h);
 
     	/* Neutral palette (11-step, derived from --neutral-color; 500 is pure) */
-	--n-0: color-mix(in srgb, var(--neutral-color) 4%, var(--background-color));
+	--n-0: color-mix(in srgb, var(--neutral-color) 0%, var(--background-color));
 	--n-100: color-mix(in srgb, var(--neutral-color) 15%, var(--background-color));
 	--n-200: color-mix(in srgb, var(--neutral-color) 30%, var(--background-color));
 	--n-300: color-mix(in srgb, var(--neutral-color) 48%, var(--background-color));
@@ -17,7 +17,7 @@
 	--n-700: color-mix(in srgb, var(--neutral-color) 64%, var(--foreground-color));
 	--n-800: color-mix(in srgb, var(--neutral-color) 46%, var(--foreground-color));
 	--n-900: color-mix(in srgb, var(--neutral-color) 28%, var(--foreground-color));
-	--n-1000: color-mix(in srgb, var(--neutral-color) 14%, var(--foreground-color));
+	--n-1000: color-mix(in srgb, var(--neutral-color) 0%, var(--foreground-color));
 
 	/* Primary palette (11-step, derived from --_primary; 500 is pure) */
 	--p-0: color-mix(in srgb, var(--_primary) 6%, var(--background-color));
