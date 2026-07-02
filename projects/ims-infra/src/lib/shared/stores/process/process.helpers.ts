@@ -3,7 +3,6 @@ import { StepTab } from "../config/config.slice";
 
 export interface StepState extends StepTab {
     readonly isSelected: boolean;
-    readonly isVisible: boolean;
     readonly isEnabled: boolean;
 }
 
