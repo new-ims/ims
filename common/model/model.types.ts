@@ -35,6 +35,7 @@ export type { Insured } from './insured';
 export type { Message } from './message.model';
 export type { Modify } from './modify';
 export type { NursingClaimProcess } from './nursing-claim-process';
+export type { Process, ProcessType } from './process';
 export type { ProcessLetterData } from './process-letter-data';
 export { PROCESS_MESSAGE_TYPES } from './process-message.model';
 export type { ProcessMessage, ProcessMessageType } from './process-message.model';
@@ -47,6 +48,3 @@ export type { Transmission } from './transmission';
 export type { ISODateTimeString } from './atoms';
 
 
-export type Root = AmbulatoryHealthClaimProcess;
-export type Process = AmbulatoryHealthClaimProcess | NursingClaimProcess;
-export type ProcessType = Process['processType'];
