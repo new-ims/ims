@@ -1,5 +1,6 @@
 import { Model } from "@common";
 import { formatToIsraeliDate } from "./../../../../tools"
+import { StepTab } from "../config/config.slice";
 
 export interface ProcessDetailsVm {
     readonly insuredDisplayName: string;

@@ -1,4 +1,5 @@
 import { Model } from "@common";
+import { StepTab } from "../config/config.slice";
 
 export interface ProcessSlice {
     readonly process: Model.Process | null;
